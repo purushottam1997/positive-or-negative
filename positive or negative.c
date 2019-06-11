@@ -1,15 +1,19 @@
 #include <stdio.h>
 int main()
 {
-    int number;
-    printf(" \n");
-    scanf("%d",&number);
+    double number;
 
-    // True if remainder is 0
-    if( number%2 == 0 )
-        printf("even",number);
+    printf("Enter a number: ");
+    scanf("%lf", &number);
+
+    if (number <= 0.0)
+    {
+        if (number == 0.0)
+            printf("You entered 0.");
+        else
+            printf("You entered a negative number.");
+    }
     else
-        printf("odd",number);
+        printf("You entered a positive number.");
     return 0;
 }
-© 2019 GitHub, Inc.
